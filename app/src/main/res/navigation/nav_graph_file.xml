@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_file"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.todoproject.presentation.authentication.LogInFragment"
+        android:label="LogInFragment" >
+        <action
+            android:id="@+id/action_logInFragment_to_sigUpFragment"
+            app:destination="@id/sigUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sigUpFragment"
+        android:name="com.example.todoproject.presentation.authentication.SigUpFragment"
+        android:label="SigUpFragment" >
+        <action
+            android:id="@+id/action_sigUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_sigUpFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.todoproject.presentation.dashboard.DashboardFragment"
+        android:label="ProfileFragment" />
+</navigation>
